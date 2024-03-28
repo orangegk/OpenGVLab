@@ -5,10 +5,10 @@ import Events from '../components/Events.vue'
 import Blogs from '../components/Blogs.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    redirect: '/projects' // 重定向到 '/home'
-  },
+  // {
+  //   path: '/',
+  //   redirect: '/projects' // 重定向到 '/home'
+  // },
   {
     path: '/home',
     name: 'Home',
@@ -29,11 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Blogs',
     component: Blogs
   },
-  {
-    path: '/:pathMatch(.*)*', // 匹配不成功时显示 Home 页面
-    name: 'NotFound',
-    component: Home
-  }
+  // {
+  //   path: '/:pathMatch(.*)*', // 匹配不成功时显示 Home 页面
+  //   name: 'NotFound',
+  //   component: Home
+  // }
 ];
 
 
