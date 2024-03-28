@@ -28,7 +28,7 @@
         // { url: getImageUrl('003', import.meta.url) },
     ];
 
-    function getImageUrl(name, baseUrl) {
+    function getImageUrl(name:string, baseUrl:string) {
         const imagePath = `../assets/images/${name}.jpg`;
         const fullUrl = new URL(imagePath, baseUrl).href;
         // console.log("fullUrl==========================", fullUrl)

@@ -19,6 +19,19 @@ export default defineConfig({
         replacement:resolve(__dirname,'src') 
       }
     ]
-  }
+  },
+  build: {
+    target: 'esnext',
+    outDir: 'docs',
+    assetsDir: 'assets',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 })
 

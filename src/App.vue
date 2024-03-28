@@ -3,7 +3,6 @@
     <el-container>
       <el-header
         class="transparent-header"
-        ref="headerDom"
         id="header"
         @scroll="handleScroll"
       >
@@ -37,42 +36,45 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-const headerDom = ref();
-const divtest=ref();
-
+let header:any
 const activeIndex = ref("1");
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
 
-
-onMounted(() => {
-  const header = document.getElementById('header')||null;
-  
-  function debounce(func, wait) {
-    let timeout;
-    return function() {
-      const context = this;
-      const args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        func.apply(context, args);
-      }, wait);
-    };
-  }
-
-  function handleScroll() {
-    console.log('scrolling============================');
-    if (header && window.pageYOffset > 0) {
+function handleScroll() {
+  // console.log("scrolling============================", header);
+  if (header) {
+    if (window.scrollY > 0) {
       header.style.background = "white"; // 设置背景颜色为白色
     } else {
       header.style.background = "transparent"; // 恢复原始背景颜色
     }
   }
+}
 
+function debounce(func: Function, wait: number): Function {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return function (this: any, ...args: any[]) {
+    const context = this;
+
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(() => {
+      func.apply(context, args);
+    }, wait);
+  };
+}
+
+onMounted(() => {
+  header = document.getElementById("header") || null;
+  // console.log("header=======================", header);
   const debouncedScroll = debounce(handleScroll, 200); // 设置防抖时间为200ms
 
-  window.addEventListener("scroll", debouncedScroll);
+  window.addEventListener("scroll", () => debouncedScroll(null)); // 传入 null 或其他合适的参数
 });
 </script>
 

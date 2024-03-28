@@ -6,16 +6,13 @@ import Blogs from '../components/Blogs.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-  //路由初始指向
-    path: '/home',
-    name: 'Home',
-    component:Home,
+    path: '/',
+    redirect: '/home' // 重定向到 '/home'
   },
   {
-  //路由初始指向
     path: '/home',
     name: 'Home',
-    component:Home,
+    component: Home
   },
   {
     path: '/projects',
@@ -31,8 +28,14 @@ const routes: Array<RouteRecordRaw> = [
     path: '/blogs',
     name: 'Blogs',
     component: Blogs
+  },
+  {
+    path: '/:pathMatch(.*)*', // 匹配不成功时显示 Home 页面
+    name: 'NotFound',
+    component: Home
   }
-]
+];
+
 
 const router = createRouter({
   history: createWebHistory(),
