@@ -8,10 +8,22 @@
   <title>OpenGVLab</title>
   <script type="module" crossorigin src="./assets/index-DkFmsxzn.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-C87naxU4.css">
+  <script>
+    // 这段代码要放在其他js的前面
+    (function () {
+      var redirect = sessionStorage.redirect;
+      console.log("redirect========================",redirect)
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app"></div>
+
 </body>
 
 </html>
