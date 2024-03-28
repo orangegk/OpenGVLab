@@ -7,7 +7,7 @@ import Blogs from '../components/Blogs.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home' // 重定向到 '/home'
+    redirect: '/projects' // 重定向到 '/home'
   },
   {
     path: '/home',
