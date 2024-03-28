@@ -1,2 +1,2 @@
 # OpenGVLab
-OpenGVLab简介官网
+OpenGVLab简介
