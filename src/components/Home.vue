@@ -30,7 +30,7 @@
 
     function getImageUrl(name:string, baseUrl:string) {
         console.log("baseUrl==========================", baseUrl)
-        const imagePath = `../assets/images/${name}`;
+        const imagePath = `../../src/assets/images/${name}`;
         const fullUrl = new URL(imagePath, import.meta.url).href;
         console.log("fullUrl==========================", fullUrl)
         return fullUrl;
