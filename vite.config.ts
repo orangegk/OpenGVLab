@@ -5,7 +5,8 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
   //解决“vite use `--host` to expose”
-  base: './',
+  // base: './',
+  base: '/OpenGVLab/',
   server: {             
     host: '0.0.0.0',	
     port: 8080,      
