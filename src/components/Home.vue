@@ -29,9 +29,10 @@
     ];
 
     function getImageUrl(name:string, baseUrl:string) {
-        const imagePath = `@/assets/images/${name}.jpg`;
+        console.log("baseUrl==========================", baseUrl)
+        const imagePath = `../../src/assets/images/${name}.jpg`;
         const fullUrl = new URL(imagePath, baseUrl).href;
-        // console.log("fullUrl==========================", fullUrl)
+        console.log("fullUrl==========================", fullUrl)
         return fullUrl;
     }
 
