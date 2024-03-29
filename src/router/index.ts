@@ -38,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
 
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/OpenGVLab/'),
   routes
 })
 
