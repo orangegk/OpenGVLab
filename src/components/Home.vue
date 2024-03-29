@@ -23,15 +23,15 @@
     //     return new URL(`../images/${name}.jpg`,).href
     // }
     const carouselData = [
-        { url: getImageUrl('001', import.meta.url) },
-        { url: getImageUrl('002', import.meta.url) },
+        { url: getImageUrl('001.jpg', import.meta.url) },
+        { url: getImageUrl('002.jpg', import.meta.url) },
         // { url: getImageUrl('003', import.meta.url) },
     ];
 
     function getImageUrl(name:string, baseUrl:string) {
         console.log("baseUrl==========================", baseUrl)
-        const imagePath = `../../src/assets/images/${name}.jpg`;
-        const fullUrl = new URL(imagePath, baseUrl).href;
+        const imagePath = `../assets/images/${name}`;
+        const fullUrl = new URL(imagePath, import.meta.url).href;
         console.log("fullUrl==========================", fullUrl)
         return fullUrl;
     }
