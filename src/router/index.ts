@@ -3,6 +3,7 @@ import Home from '../components/Home.vue'
 import Projects from '../components/Projects.vue'
 import Events from '../components/Events.vue'
 import Blogs from '../components/Blogs.vue'
+import JointTraining from '../components/JointTraining.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/blogs',
     name: 'Blogs',
     component: Blogs
+  },
+  {
+    path: '/jointTraining',
+    name: 'JointTraining',
+    component: JointTraining
   },
   // {
   //   path: '/:pathMatch(.*)*', // 匹配不成功时显示 Home 页面

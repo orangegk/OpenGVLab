@@ -1,11 +1,7 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header
-        class="transparent-header"
-        id="header"
-        @scroll="handleScroll"
-      >
+      <el-header class="transparent-header" id="header" @scroll="handleScroll">
         <el-menu
           :default-active="activeIndex"
           class="el-menu-demo"
@@ -26,6 +22,15 @@
           <el-menu-item index="/projects">projects</el-menu-item>
           <el-menu-item index="/events">events</el-menu-item>
           <el-menu-item index="/blogs">blogs</el-menu-item>
+          <el-menu-item index="/jointTraining">joint training</el-menu-item>
+          <el-menu-item >
+            <el-link href="https://github.com/OpenGVLab" class="github">
+              <img src="@/assets/images/github.png" alt="" />
+            </el-link>
+          </el-menu-item>
+          <!-- <div class="github">
+            <img class="github-img" src="@/assets/images/github.png" alt="" />
+          </div> -->
         </el-menu>
       </el-header>
       <el-main><router-view></router-view></el-main>
@@ -36,7 +41,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-let header:any
+let header: any;
 const activeIndex = ref("1");
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
@@ -79,6 +84,16 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 20px;
+  .github-img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .transparent-header {
   background-color: rgba(255, 255, 255, 0);
   /* 设置背景为透明 */
