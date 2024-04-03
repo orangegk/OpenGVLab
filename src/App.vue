@@ -12,8 +12,8 @@
         >
           <el-menu-item index="/home">
             <img
-              style="width: 100px"
-              src="@/assets/images/logo.jpg"
+            class="logo"
+              src="@/assets/images/logo.svg"
               alt="Element logo"
             />
           </el-menu-item>
@@ -28,9 +28,6 @@
               <img src="@/assets/images/github.png" alt="" />
             </el-link>
           </el-menu-item>
-          <!-- <div class="github">
-            <img class="github-img" src="@/assets/images/github.png" alt="" />
-          </div> -->
         </el-menu>
       </el-header>
       <el-main><router-view></router-view></el-main>
@@ -97,6 +94,11 @@ onMounted(() => {
 .transparent-header {
   background-color: rgba(255, 255, 255, 0);
   /* 设置背景为透明 */
+  .logo{
+    width: 100px;
+    background: #0000;
+    color: #fff;
+  }
 }
 
 :deep(.el-main) {

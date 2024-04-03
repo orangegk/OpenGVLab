@@ -7,11 +7,32 @@
           <el-card style="max-width: 480px">
             <template #header>
               <div class="card-header">
-                <span>Card name</span>
+                <span><img src="@/assets/images/vchitect.jpg" alt="" /></span>
               </div>
             </template>
-            <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
-            <template #footer>Footer content</template>
+            <div class="card-body">
+              <div class="card-body-introduce">
+                <div class="card-body-title">Vchitect </div>
+                <div class="card-body-content">上海人工智能实验室视频生成团队,介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</div>
+              </div>
+              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag type="primary" effect="light" round>AI</el-tag></div>
+            </div>
+            <template #footer>
+              <div class="card-footer">
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/github.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/Twitter.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/知乎.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/公众号.png" alt="" />
+                </el-link>
+              </div>
+            </template>
           </el-card>
         </el-col>
         <el-col :span="6">
@@ -22,7 +43,22 @@
               </div>
             </template>
             <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
-            <template #footer>Footer content</template>
+            <template #footer>
+              <div class="card-footer">
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/github.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/Twitter.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/知乎.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/公众号.png" alt="" />
+                </el-link>
+              </div>
+            </template>
           </el-card>
         </el-col>
         <el-col :span="6">
@@ -33,7 +69,22 @@
               </div>
             </template>
             <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
-            <template #footer>Footer content</template>
+            <template #footer>
+              <div class="card-footer">
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/github.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/Twitter.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/知乎.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/公众号.png" alt="" />
+                </el-link>
+              </div>
+            </template>
           </el-card>
         </el-col>
         <el-col :span="6">
@@ -44,12 +95,27 @@
               </div>
             </template>
             <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
-            <template #footer>Footer content</template>
+            <template #footer>
+              <div class="card-footer">
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/github.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/Twitter.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/知乎.png" alt="" />
+                </el-link>
+                <el-link href="https://github.com/OpenGVLab" class="github">
+                  <img src="@/assets/images/公众号.png" alt="" />
+                </el-link>
+              </div>
+            </template>
           </el-card>
         </el-col>
       </el-row></div>
 
-    <div class="open-source-all"> 
+    <div class="open-source-all">
       <el-button type="primary" round>查看全部项目</el-button>
     </div>
   </div>
@@ -57,6 +123,83 @@
 <script setup lang="ts">
 </script>
 <style scoped lang="scss">
+  
+  :deep(.el-tag) {
+    margin-right: 10px;
+  }
+  :deep(.el-card__body) {
+    height: 200px;
+  }
+  :deep(.el-card):hover {
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(90deg, #fff, #fff), linear-gradient(135deg, #4047f7, #ffa900 32.33%, #008eff 64.1%, #00c4b7 95.45%);
+    background-origin: padding-box, border-box;
+    border: 2px solid #0000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  :deep(.el-card) {
+    cursor: pointer;
+    border: 2px solid #fff3;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px #0000000d;
+    transition: background-image 0.3s; /* 添加过渡效果 */
+    box-shadow: 0 10px 20px #0000000d;
+    height: 100%;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+
+    .card-body-title {
+      font-size: 20px;
+      text-align: start;
+    }
+
+    .card-body-content {
+      font-size: 13px;
+      line-height: 24px;
+      margin-bottom: 8px;
+      text-align: start;
+      word-break: break-word;
+    }
+
+    .card-body-field {
+      font-size: 13px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .github {
+      margin: 0 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
   .open-source {
     width: 100%;
     height: 100%;
@@ -67,10 +210,10 @@
     align-items: center;
     font-size: 20px;
     color: #000;
-    font-weight: bold;
     margin-top: 50px;
 
     .open-source-title {
+      font-weight: bold;
       width: 100px;
       height: 36px;
       margin-top: 30px;
@@ -84,8 +227,12 @@
     .open-source-content {
       width: 96vw;
       margin: 0 auto;
+      font-size: 16px;
+      color: #000;
+      /* font-weight: bold; */
     }
-    .open-source-all{
+
+    .open-source-all {
       margin: 30px auto;
     }
   }
