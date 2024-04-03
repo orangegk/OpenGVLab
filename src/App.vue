@@ -12,7 +12,7 @@
         >
           <el-menu-item index="/home">
             <img
-            class="logo"
+              class="logo"
               src="@/assets/images/logo.svg"
               alt="Element logo"
             />
@@ -23,7 +23,7 @@
           <el-menu-item index="/events">events</el-menu-item>
           <el-menu-item index="/blogs">blogs</el-menu-item>
           <el-menu-item index="/jointTraining">joint training</el-menu-item>
-          <el-menu-item >
+          <el-menu-item>
             <el-link href="https://github.com/OpenGVLab" class="github">
               <img src="@/assets/images/github.png" alt="" />
             </el-link>
@@ -31,7 +31,34 @@
         </el-menu>
       </el-header>
       <el-main><router-view></router-view></el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer>
+        <div class="footer">
+          <div class="footer-title">
+            <div>欢迎加入OpenGVLab</div>
+            <div style="font-size: 15px;margin: 30px auto;">世界领先的通用视觉技术体系</div>
+            <div class="footer-content">
+            <el-link href="https://github.com/OpenGVLab" class="github">
+              <img src="@/assets/images/github.png" alt="" />
+            </el-link>
+            <el-link href="https://github.com/OpenGVLab" class="github">
+              <img src="@/assets/images/Twitter.png" alt="" />
+            </el-link>
+            <el-link href="https://github.com/OpenGVLab" class="github">
+              <img src="@/assets/images/知乎.png" alt="" />
+            </el-link>
+            <el-link href="https://github.com/OpenGVLab" class="github">
+              <img src="@/assets/images/公众号.png" alt="" />
+            </el-link>
+          </div>
+          </div>
+          
+
+          <video autoplay loop muted playsinline>
+            <source src="@/assets/videos/footer.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -81,6 +108,48 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+:deep(.el-footer) {
+  padding: 0;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .footer-title {
+    position: absolute;
+
+    font-size: 30px;
+    color: white;
+    z-index: 1;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .github {
+      margin: 0 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 视频铺满整个div */
+    z-index: -1; /* 将视频放在div的背景下面 */
+  }
+}
 .github {
   display: flex;
   justify-content: center;
@@ -94,7 +163,7 @@ onMounted(() => {
 .transparent-header {
   background-color: rgba(255, 255, 255, 0);
   /* 设置背景为透明 */
-  .logo{
+  .logo {
     width: 100px;
     background: #0000;
     color: #fff;
