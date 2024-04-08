@@ -4,7 +4,7 @@
     <div class="open-source-introduction">在这里，发现了解OpenGVLab的开源项目。 欢迎你参与OpenGVLab开源，不论是使用或贡献。</div>
     <div class="open-source-content"><el-row :gutter="20">
         <el-col :span="6">
-          <el-card style="max-width: 480px">
+          <el-card style="max-width: 480px" id="card">
             <template #header>
               <div class="card-header">
                 <span><img src="@/assets/images/vchitect.jpg" alt="" /></span>
@@ -15,7 +15,8 @@
                 <div class="card-body-title">Vchitect </div>
                 <div class="card-body-content">上海人工智能实验室视频生成团队,介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</div>
               </div>
-              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag type="primary" effect="light" round>AI</el-tag></div>
+              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag
+                  type="primary" effect="light" round>AI</el-tag></div>
             </div>
             <template #footer>
               <div class="card-footer">
@@ -36,13 +37,20 @@
           </el-card>
         </el-col>
         <el-col :span="6">
-          <el-card style="max-width: 480px">
+          <el-card style="max-width: 480px" id="card">
             <template #header>
               <div class="card-header">
-                <span>Card name</span>
+                <span><img src="@/assets/images/vchitect.jpg" alt="" /></span>
               </div>
             </template>
-            <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
+            <div class="card-body">
+              <div class="card-body-introduce">
+                <div class="card-body-title">Vchitect </div>
+                <div class="card-body-content">上海人工智能实验室视频生成团队,介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</div>
+              </div>
+              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag
+                  type="primary" effect="light" round>AI</el-tag></div>
+            </div>
             <template #footer>
               <div class="card-footer">
                 <el-link href="https://github.com/OpenGVLab" class="github">
@@ -62,13 +70,20 @@
           </el-card>
         </el-col>
         <el-col :span="6">
-          <el-card style="max-width: 480px">
+          <el-card style="max-width: 480px" id="card">
             <template #header>
               <div class="card-header">
-                <span>Card name</span>
+                <span><img src="@/assets/images/vchitect.jpg" alt="" /></span>
               </div>
             </template>
-            <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
+            <div class="card-body">
+              <div class="card-body-introduce">
+                <div class="card-body-title">Vchitect </div>
+                <div class="card-body-content">上海人工智能实验室视频生成团队,介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</div>
+              </div>
+              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag
+                  type="primary" effect="light" round>AI</el-tag></div>
+            </div>
             <template #footer>
               <div class="card-footer">
                 <el-link href="https://github.com/OpenGVLab" class="github">
@@ -88,13 +103,20 @@
           </el-card>
         </el-col>
         <el-col :span="6">
-          <el-card style="max-width: 480px">
+          <el-card style="max-width: 480px" id="card">
             <template #header>
               <div class="card-header">
-                <span>Card name</span>
+                <span><img src="@/assets/images/vchitect.jpg" alt="" /></span>
               </div>
             </template>
-            <p v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</p>
+            <div class="card-body">
+              <div class="card-body-introduce">
+                <div class="card-body-title">Vchitect </div>
+                <div class="card-body-content">上海人工智能实验室视频生成团队,介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍</div>
+              </div>
+              <div class="card-body-field"> <el-tag type="primary" effect="light" round>Video generation</el-tag><el-tag
+                  type="primary" effect="light" round>AI</el-tag></div>
+            </div>
             <template #footer>
               <div class="card-footer">
                 <el-link href="https://github.com/OpenGVLab" class="github">
@@ -121,15 +143,28 @@
   </div>
 </template>
 <script setup lang="ts">
+  import { ref, onMounted } from "vue";
+
+  // onMounted(() => {
+  //   const card = document.getElementById('card');
+
+  //   card.addEventListener('mousemove', (e) => {
+  //     const mouseX = e.offsetX;
+  //     const mouseY = e.offsetY;
+  //     // console.log(gradientX, gradientY);
+  //     card.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, #ffa999, #ffa900 16.33%,  #fff 15.45%)`;
+  //   });
+  // })
 </script>
 <style scoped lang="scss">
-  
   :deep(.el-tag) {
     margin-right: 10px;
   }
+
   :deep(.el-card__body) {
     height: 200px;
   }
+
   :deep(.el-card):hover {
     background-clip: padding-box, border-box;
     background-image: linear-gradient(90deg, #fff, #fff), linear-gradient(135deg, #4047f7, #ffa900 32.33%, #008eff 64.1%, #00c4b7 95.45%);
@@ -139,15 +174,22 @@
     overflow: hidden;
     position: relative;
   }
+
   :deep(.el-card) {
     cursor: pointer;
     border: 2px solid #fff3;
     border-radius: 12px;
     box-shadow: 0 10px 20px #0000000d;
-    transition: background-image 0.3s; /* 添加过渡效果 */
+    transition: background-image 0.3s;
+    /* 添加过渡效果 */
     box-shadow: 0 10px 20px #0000000d;
     height: 100%;
   }
+
+  /* :deep(.el-card):hover {
+    background: radial-gradient(circle closest-side, #4047f7, #ffa900 32.33%, #008eff 64.1%, #00c4b7 95.45%);
+    background-size: 20px, 20px;
+  } */
 
   .card-header {
     display: flex;

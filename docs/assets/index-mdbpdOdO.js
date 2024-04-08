@@ -1,0 +1,1 @@
+import{j as t,o as a,c as n}from"./index-BaPocoLk.js";const s={class:"title"};const o=t({},[["render",function(t,o){return a(),n("div",s,"Joint training")}],["__scopeId","data-v-a11c1c14"]]);export{o as default};

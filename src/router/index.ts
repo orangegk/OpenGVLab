@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../components/Home.vue'
-import Projects from '../components/Projects.vue'
-import Events from '../components/Events.vue'
-import Blogs from '../components/Blogs.vue'
-import JointTraining from '../components/JointTraining.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,27 +9,27 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: ()=>import('../views/home/index.vue')
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects
+    component: ()=>import('../views/projects/index.vue')
   },
   {
     path: '/events',
     name: 'Events',
-    component: Events
+    component: ()=>import('../views/events/index.vue')
   },
   {
     path: '/blogs',
     name: 'Blogs',
-    component: Blogs
+    component: ()=>import('../views/blogs/index.vue')
   },
   {
     path: '/jointTraining',
     name: 'JointTraining',
-    component: JointTraining
+    component: ()=>import('../views/jointTraining/index.vue')
   },
   // {
   //   path: '/:pathMatch(.*)*', // 匹配不成功时显示 Home 页面

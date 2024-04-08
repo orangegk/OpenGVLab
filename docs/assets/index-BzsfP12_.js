@@ -1,0 +1,1 @@
+import{j as s,o as t,c as o}from"./index-BaPocoLk.js";const a={class:"title"};const e=s({},[["render",function(s,e){return t(),o("div",a,"Blogs")}],["__scopeId","data-v-8853c9b9"]]);export{e as default};
