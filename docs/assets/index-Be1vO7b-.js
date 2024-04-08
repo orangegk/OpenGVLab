@@ -1,1 +1,0 @@
-import{j as s,o as t,c as a}from"./index-BaPocoLk.js";const e={class:"title"};const c=s({},[["render",function(s,c){return t(),a("div",e,"Events")}],["__scopeId","data-v-56acbc48"]]);export{c as default};

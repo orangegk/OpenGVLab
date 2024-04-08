@@ -13,7 +13,7 @@
             </template>
             <div class="card-body">
               <div class="card-body-introduce">
-                <div class="card-body-header"><img src="@/assets/images/location.png"
+                <div class="card-body-header"><img src="@/assets/images/location.svg"
                     alt="" /><span>2024年0x月xx日-0x月xx日</span>
                   <el-divider direction="vertical" /><span>上海</span>
                 </div>
@@ -32,7 +32,7 @@
             </template>
             <div class="card-body">
               <div class="card-body-introduce">
-                <div class="card-body-header"><img src="@/assets/images/location.png"
+                <div class="card-body-header"><img src="@/assets/images/location.svg"
                     alt="" /><span>2024年0x月xx日-0x月xx日</span>
                   <el-divider direction="vertical" /><span>上海</span>
                 </div>
@@ -51,7 +51,7 @@
             </template>
             <div class="card-body">
               <div class="card-body-introduce">
-                <div class="card-body-header"><img src="@/assets/images/location.png"
+                <div class="card-body-header"><img src="@/assets/images/location.svg"
                     alt="" /><span>2024年0x月xx日-0x月xx日</span>
                   <el-divider direction="vertical" /><span>上海</span>
                 </div>
